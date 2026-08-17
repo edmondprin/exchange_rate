@@ -28,7 +28,9 @@ def test_get_currency(monkeypatch):
     assert target_currency == "EUR"
 
 def test_get_exchange_rate():
-    pass
+    new_rate = get_exchange_rate("EUR", "USD")
+    assert new_rate > 1
+    assert isinstance(new_rate, float)
 
 
 
